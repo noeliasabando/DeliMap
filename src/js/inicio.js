@@ -87,8 +87,8 @@ $('#exampleModalCenter').on('show.bs.modal', function(event) {
   var localAddress= modal_localAddress
   var localPhoto= modal_localPhoto
   var modal = $(this)
-  modal.find(".modal-name").text("Nombre restaurant " + localName)
-  modal.find(".modal-address").text("Dirección " + localAddress)
+  modal.find(".modal-name").text("Nombre restaurant: " + localName)
+  modal.find(".modal-address").text("Dirección: " + localAddress)
   modal.find(".modal-photo").attr("src", localPhoto)
  
 }) 
