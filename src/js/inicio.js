@@ -52,6 +52,8 @@ function callback(results, status) {
   }
 }
 var modal_localName="";
+var modal_localAddress="";
+var modal_localPhoto="";
 
 function createMarker(place) {
   var placeLoc = place.geometry.location;
@@ -61,9 +63,12 @@ function createMarker(place) {
   });
 
   google.maps.event.addListener(marker, 'click', function () {
-    infoWindow.setContent(place.name);
+    infoWindow.setContent(place.name);  
+    console.log(place.types) 
     infoWindow.open(map, this);
     modal_localName=place.name
+    modal_localAddress=place.formatted_address
+    modal_localPhoto=place.photos[0].getUrl({"maxWidth":400, "maxHeight":400})   
     $('#exampleModalCenter').modal("show")  
   });
 }
@@ -79,9 +84,16 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 $('#exampleModalCenter').on('show.bs.modal', function(event) {
   var card = $(event.relatedTarget) 
   var localName = modal_localName
+  var localAddress= modal_localAddress
+  var localPhoto= modal_localPhoto
   var modal = $(this)
   modal.find(".modal-name").text("Nombre restaurant " + localName)
+  modal.find(".modal-address").text("Dirección " + localAddress)
+  modal.find(".modal-photo").attr("src", localPhoto)
+ 
 }) 
+
+
 
 
 
