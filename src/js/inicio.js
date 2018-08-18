@@ -51,6 +51,7 @@ function callback(results, status) {
     }
   }
 }
+var modal_localName="";
 
 function createMarker(place) {
   var placeLoc = place.geometry.location;
@@ -62,6 +63,8 @@ function createMarker(place) {
   google.maps.event.addListener(marker, 'click', function () {
     infoWindow.setContent(place.name);
     infoWindow.open(map, this);
+    modal_localName=place.name
+    $('#exampleModalCenter').modal("show")  
   });
 }
 
@@ -72,6 +75,14 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     'Error: Your browser doesn\'t support geolocation.');
   infoWindow.open(map);
 }
+
+$('#exampleModalCenter').on('show.bs.modal', function(event) {
+  var card = $(event.relatedTarget) 
+  var localName = modal_localName
+  var modal = $(this)
+  modal.find(".modal-name").text("Nombre restaurant " + localName)
+}) 
+
 
 
 
