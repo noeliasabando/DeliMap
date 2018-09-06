@@ -12,4 +12,4 @@ buscas.
 
 ## Link del Proyecto
 
-[Mi DeliMap](https://noeliasabando.github.io/FoodMap/demo.html)
+[Mi DeliMap](https://noeliasabando.github.io/DeliMap/demo.html)
