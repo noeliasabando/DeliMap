@@ -1,17 +1,12 @@
-#imagenSplash{
-  background-image: url(../../img/fondo.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  
+body{
+  background-color: rgba(231, 106, 34, 0.603);  
 }
 
 #titulo{
   color: white;
+  margin-top: 100px;
 }
 
- #splash{
-  background-color:  rgba(65, 64, 64, 0.637);
-  margin-top: 100px;
-  border-radius: 90px;
-} 
+#parrafo{
+  color: white;
+}
