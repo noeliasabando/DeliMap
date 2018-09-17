@@ -1,12 +1,12 @@
 body{
-  background-color: rgba(231, 106, 34, 0.603);  
+  background-color: #EDBFC2;
 }
 
-#titulo{
-  color: white;
+#logo{
   margin-top: 100px;
 }
 
 #parrafo{
-  color: white;
+  margin-top: 10px;
+  color:#FD5A1E;
 }
